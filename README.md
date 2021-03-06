@@ -1,0 +1,2 @@
+# perbandingan
+Rumus perbandingan
