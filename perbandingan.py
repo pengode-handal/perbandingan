@@ -4,12 +4,6 @@ import os
 from time import sleep as jeda
 from os import system as sistem
 
-print("[+] WELCOME TO TOOLS MTK")
-
-print("pilihan tools")
-print("[1] tools perbandingan tabel")
-print("[2] tools konvert suhu")
-
 print("\nWELCOME TO TOOLS RUMUS PERBANDINGAN\n")
 jeda(1)
 print("tools ini tentang mencari perbandingan di tabel yang mencari waktu, unit, orang")
