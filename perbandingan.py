@@ -1,9 +1,28 @@
 #bismilla
 import time 
-import os
+import sys
 from time import sleep as jeda
 from os import system as sistem
+sistem('pip install requests')
+import requests
 
+from requests import Session
+s = Session()
+
+def p(s):
+  for c in s + '\n' :
+    sys.stdout.write(c)
+    sys.stdout.flush()
+    jeda(1. / 200)
+
+p("""
+____    _   _ __  __ _   _ ____
+|  _ \ | | | |  \/  | | | / ___|
+| |_) || | | | |\/| | | | \___ \
+
+|  _ < | |_| | |  | | |_| |___) |
+|_| \_\ \___/|_|  |_|\___/|____/
+""")
 print("\nWELCOME TO TOOLS RUMUS PERBANDINGAN\n")
 jeda(1)
 print("tools ini tentang mencari perbandingan di tabel yang mencari waktu, unit, orang")
@@ -43,7 +62,7 @@ try:
     print("perhatikan di tabel ke 2 mu lalu masukan waktu dan pekerja")
     unitUW = int(input("waktu: "))
     kerjaUP = int(input("orang: "))
-    hasilU = int((opsiW * opsiP) / opsiU) / (unitUW * kerjaUP)
+    hasilU = int(unitUW / (opsiW * ((opsiP/opsiU)/kerjaUP)))
     print("####HASIL####")
     print("unit: ",hasilU)
     print("##############")
@@ -53,7 +72,7 @@ try:
     print("perhatikan di tabel ke 2 mu lalu masukan waktu dan unit")
     unitPW = int(input("waktu: "))
     kerjaPU = int(input("unit: "))
-    cara1 = int(unitPW * kerjaPU) / (opsiW * opsiP / opsiU)
+    cara1 = int(opsiW * opsiP) / opsiU * (kerjaPU/unitPW)
     print("####HASIL####")
     print("waktu: ",cara1)
     print("#############")
